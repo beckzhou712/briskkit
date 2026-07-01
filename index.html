@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briskkit — Small, sharp browser tools</title>
+<meta name="description" content="Briskkit makes small, single-purpose Chrome extensions. Each does one thing, fast, then gets out of your way.">
+
+<!--
+  ════════════════════════════════════════════════════════════════════
+  Briskkit 落地页 —— "More tools by Briskkit" 入口指向这里。
+  部署(GitHub Pages):
+    1. 建一个【公开】仓库,名叫 briskkit
+    2. 把本文件作为 index.html 放进去,push
+    3. 仓库 Settings → Pages → Source 选 main 分支 / root → Save
+    4. 几分钟后访问 https://beckzhou712.github.io/briskkit
+  上架拿到商店链接后:把每张卡片 <a class="card__cta"> 的 href="#"
+    换成该扩展的 Chrome 商店 URL,并删掉 data-soon(占位徽章消失)。
+  ════════════════════════════════════════════════════════════════════
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --teal: #0d9488; --teal-2: #14b8a6; --ink: #0f172a; --muted: #5b6b78; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Baloo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: linear-gradient(165deg, #eafaf6 0%, #dcf3ed 45%, #d3efe7 100%);
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 72px; }
+
+  /* Hero */
+  .hero { text-align: center; margin-bottom: 48px; }
+  .brand {
+    display: inline-block; font-weight: 800; font-size: 22px; color: #fff;
+    background: var(--teal-2); padding: 8px 22px; border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(20,184,166,.35); letter-spacing: .3px;
+  }
+  .hero h1 {
+    font-size: 46px; font-weight: 800; color: var(--teal);
+    margin: 26px 0 12px; letter-spacing: -.5px; line-height: 1.1;
+  }
+  .hero p { font-size: 18px; color: var(--muted); font-weight: 500; max-width: 560px; margin: 0 auto; }
+
+  /* Grid */
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } }
+
+  .card {
+    background: #fff; border-radius: 16px; padding: 22px 22px 20px;
+    box-shadow: 0 8px 26px rgba(13,148,136,.10), 0 2px 6px rgba(0,0,0,.04);
+    display: flex; flex-direction: column;
+    border-top: 4px solid var(--accent, var(--teal-2));
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(13,148,136,.16); }
+  .card__name { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+  .card__desc { font-size: 14.5px; color: var(--muted); font-weight: 500; flex: 1; margin-bottom: 16px; }
+  .card__cta {
+    align-self: flex-start; text-decoration: none;
+    font-weight: 700; font-size: 14px; color: #fff;
+    background: var(--accent, var(--teal-2)); padding: 8px 18px; border-radius: 999px;
+  }
+  .card__cta[data-soon] { background: #e6eaed; color: #8794a0; pointer-events: none; }
+  .card__cta[data-soon]::after { content: ' · Coming soon'; font-weight: 500; }
+
+  footer { text-align: center; margin-top: 48px; font-size: 14px; color: var(--muted); font-weight: 500; }
+  footer a { color: var(--teal); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="brand">Briskkit</span>
+      <h1>Small, sharp browser tools.</h1>
+      <p>A growing family of single-purpose Chrome extensions. Each does exactly one thing — fast — and then gets out of your way.</p>
+    </header>
+
+    <main class="grid">
+      <article class="card" style="--accent:#0d9488">
+        <div class="card__name">Design X-Ray</div>
+        <div class="card__desc">Inspect any webpage like a designer: hover for CSS specs, measure spacing, pick colors, copy CSS, audit fonts &amp; colors.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+
+      <article class="card" style="--accent:#f59e0b">
+        <div class="card__name">TabSnooze</div>
+        <div class="card__desc">Auto-sleep inactive tabs to free up RAM — and wake them the moment you need them back.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+
+      <article class="card" style="--accent:#22c55e">
+        <div class="card__name">TimeTrack</div>
+        <div class="card__desc">See where your time goes. Automatic per-site tracking with clean charts — plus one-click CSV export.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+
+      <article class="card" style="--accent:#8b5cf6">
+        <div class="card__name">Multi-Clipboard</div>
+        <div class="card__desc">Your clipboard history, always in the sidebar. Paste any slot with a keystroke — never lose a copy again.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+
+      <article class="card" style="--accent:#3b82f6">
+        <div class="card__name">Glance</div>
+        <div class="card__desc">Shift-click any link to preview it in a floating peek — read it, then get right back to where you were.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+
+      <article class="card" style="--accent:#0ea5e9">
+        <div class="card__name">Save Anywhere</div>
+        <div class="card__desc">Right-click any link or image to send it straight to Dropbox or Google Drive — never your Downloads folder.</div>
+        <a class="card__cta" href="#" data-soon>Add to Chrome</a>
+      </article>
+    </main>
+
+    <footer>
+      Made by Briskkit · <a href="https://gist.github.com/beckzhou712/048480811981ec3e8432827f5709c2e7">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>
