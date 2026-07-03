@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Briskkit</title>
+<meta name="description" content="Privacy Policy for Briskkit browser extensions: Design X-Ray, Tab Suspender, TimeTrack, Multi-Clipboard, Glance, and Save Anywhere.">
+<link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --teal: #0d9488; --teal-2: #14b8a6; --ink: #0f172a; --muted: #5b6b78; --sky: #0ea5e9; --indigo: #6366f1; --purple: #8b5cf6; --amber: #f59e0b; --green: #22c55e; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Baloo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: linear-gradient(165deg, #eafaf6 0%, #dcf3ed 45%, #d3efe7 100%);
+    min-height: 100vh; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 72px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; font-size: 24px; color: var(--ink); letter-spacing: -.3px; text-decoration: none; }
+  .brand .mark { width: 32px; height: 32px; border-radius: 10px; background: conic-gradient(from 140deg, var(--teal-2), var(--sky), var(--indigo), var(--purple), var(--amber), var(--green), var(--teal-2)); box-shadow: 0 4px 12px rgba(0,0,0,.14); }
+  .card { background: #fff; border-radius: 18px; padding: 40px 40px 34px; margin-top: 28px; box-shadow: 0 8px 26px rgba(13,148,136,.10), 0 2px 6px rgba(0,0,0,.04); }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 4px; }
+  .updated { color: var(--muted); font-weight: 500; font-size: 14px; margin-bottom: 24px; }
+  h2 { font-size: 20px; font-weight: 700; margin: 30px 0 10px; color: var(--teal); }
+  h3 { font-size: 16px; font-weight: 700; margin: 18px 0 4px; }
+  p { color: #33414d; font-weight: 500; font-size: 15px; margin-bottom: 10px; }
+  ul { margin: 6px 0 10px 20px; }
+  li { color: #33414d; font-weight: 500; font-size: 15px; margin-bottom: 6px; }
+  .lead { font-size: 15.5px; }
+  a { color: var(--teal); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  .em { color: var(--muted); font-weight: 600; }
+  footer { text-align: center; margin-top: 34px; font-size: 14px; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="brand" href="./"><span class="mark"></span>Briskkit</a>
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated: 2026-06-28</div>
+      <p class="lead">This Privacy Policy applies to the following browser extensions published by Briskkit: Design X-Ray, Tab Suspender (TabSnooze), TimeTrack, Multi-Clipboard, Glance (link preview), and Save Anywhere.</p>
+
+      <h2>Our principles</h2>
+      <ul>
+        <li>We do not operate servers that receive your personal data.</li>
+        <li>We do not sell, rent, or share your data with advertisers or any third party.</li>
+        <li>Except where explicitly stated below (Save Anywhere, which uploads files to the cloud account you connect), all data stays on your own device.</li>
+        <li>We do not include any analytics, tracking, or advertising code.</li>
+      </ul>
+
+      <h2>Per-extension data practices</h2>
+
+      <h3>Design X-Ray</h3>
+      <p>Collects nothing. It runs locally inside the tab you are viewing, and only when you activate it (toolbar click or keyboard shortcut). It does not store or transmit any data.</p>
+
+      <h3>Tab Suspender (TabSnooze)</h3>
+      <p>Stores only your own settings (such as the inactivity timeout and your per-site whitelist) locally via the browser's storage. It does not read page contents and transmits nothing.</p>
+
+      <h3>TimeTrack</h3>
+      <p>Records website domains and duration visited locally, stored in browser storage and never uploaded. It does not record full URLs, page contents, form data, or browsing history beyond domain and duration.</p>
+
+      <h3>Multi-Clipboard</h3>
+      <p>To provide a clipboard history, Multi-Clipboard stores your recently copied text locally in the browser's storage. This stays on your device and is never uploaded.</p>
+
+      <h3>Glance (link preview)</h3>
+      <p>Stores only your preferences (such as the activation modifier key and the preview window size) locally. Previews load directly in your browser; we do not collect, store, or transmit the pages you preview.</p>
+
+      <h3>Save Anywhere</h3>
+      <p>Save Anywhere lets you upload a link or image to your own Dropbox and/or Google Drive.</p>
+      <p><span class="em">Authentication:</span> You connect your account using the provider's official OAuth flow. We never see or store your password.</p>
+      <p><span class="em">Data transmission:</span> When you right-click an item and choose to save it, the extension sends only that specific link or image, plus your access token, directly to Dropbox's or Google's API.</p>
+      <p><span class="em">Google Drive scope:</span> The extension uses the <code>drive.file</code> scope, meaning it can only access files it creates; it cannot see the rest of your Drive.</p>
+      <p><span class="em">Browsing data:</span> It does not collect your browsing activity or page contents.</p>
+
+      <h2>Data deletion</h2>
+      <p>Uninstalling an extension removes its locally stored data. Extensions with history features and Save Anywhere provide in-app deletion options.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:beckzhou712@gmail.com">beckzhou712@gmail.com</a></p>
+    </div>
+    <footer>Made by Briskkit · <a href="./">Home</a></footer>
+  </div>
+</body>
+</html>
